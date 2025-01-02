@@ -1,0 +1,2 @@
+from place import Place
+
