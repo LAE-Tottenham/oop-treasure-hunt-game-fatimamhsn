@@ -1,5 +1,5 @@
 class Place():
-    def __init__(self, given_name, locked=False, key = False, items=None, enemies = None):
+    def __init__(self, given_name, locked=False, key = False, items=None, enemies = None, description = None):
         # locked=False means that the locked parameter will be False by default if not provided.
         self.name = given_name
         self.locked = locked
@@ -9,10 +9,11 @@ class Place():
         self.enemies = enemies if enemies else []
         self.description = ''
         self.key = key
+        self.description = description
         # add more atributes as needed
 
-    def describe(self, description):
-        self.description = description
+    def describe(self):
+        
 
         if self.locked == True:
             if self.key == False:
@@ -44,9 +45,3 @@ class Place():
 
     # add more methods as needed
 
-
-forest =  Place( 'Enchanted Forest', True, True)
-forest.describe('this forest is very big and scary, there are many enemies')
-forest.add_item(hammer.name)
-forest.add_item(lock.name)
-forest.showstats()

@@ -1,2 +1,1 @@
-from place import Place
 
